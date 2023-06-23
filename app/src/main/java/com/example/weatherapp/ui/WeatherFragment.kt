@@ -87,7 +87,7 @@ class WeatherFragment : Fragment() {
 
     private var locationCallback: LocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
-            // This is for debugging. check if the callback is called
+            // This is purposely shown for debugging. check if the callback is called
             Toast.makeText(
                     requireContext(),
                     "Callback is called",
@@ -99,7 +99,8 @@ class WeatherFragment : Fragment() {
             var isSeachSuccessful = weatherViewModel.isSeachSuccessful
             var buttonClicked = weatherViewModel.buttonCliked
             // When the user
-            if (!alreadyShown && locationAlertAnswered && locationList.isNotEmpty() && isSeachSuccessful && !buttonClicked) {
+            //if (!alreadyShown && locationAlertAnswered && locationList.isNotEmpty() && isSeachSuccessful && !buttonClicked) {
+            if (!alreadyShown && locationAlertAnswered && locationList.isNotEmpty() && !buttonClicked) {
                 //The last location in the list is the newest
                 val location = locationList.last()
                 weatherViewModel.onLocationUpdated (location)
@@ -113,7 +114,7 @@ class WeatherFragment : Fragment() {
 
     // Save the valid query when the query input is a valid city
    fun saveLatestQuery(isSeachSuccessful: Boolean)  {
-        // This is for debugging.
+        // This is purposely shown for debugging.
         Toast.makeText(
             requireContext(),
             "saveLatestQuery",
