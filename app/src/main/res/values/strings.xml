@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_for_a_city">Search for a city</string>
+    <string name="search">Search</string>
+
+    <string name="current_location_icon_desc">Icon presenting the current location</string>
+    <string name="current_weather_icon">Weather icon presenting the current weather</string>
+    <string name="weather_icon_humidity">Weather icon presenting humidity</string>
+    <string name="weather_icon_pressure">Weather icon presenting air pressure</string>
+    <string name="weather_icon_wind">Weather icon presenting wind</string>
+
+    <string name="visibility">VISIBILITY</string>
+    <string name="sunset">SUNSET</string>
+    <string name="sunrise">SUNRISE</string>
+    <string name="feels_like">FEELS LIKE</string>
+    <string name="weather_icon_sunrise">Weather icon presenting sunrise</string>
+    <string name="weather_icon_feels_like">Weather icon presenting fees like</string>
+
+    <string name="warning_message">You have to provide a city name</string>
+    <string name="something_wrong_error">"Something went wrong… "</string>
+    <string name="wrong_input_error">No weather for this city found.</string>
+    <string name="no_internet_error">Check internet connection.</string>
+    <string name="network_status">Network status icon, loading or error.</string>
+
+</resources>
