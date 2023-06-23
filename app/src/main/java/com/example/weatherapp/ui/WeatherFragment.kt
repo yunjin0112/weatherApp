@@ -63,6 +63,18 @@ class WeatherFragment : Fragment() {
             weatherViewModel.getWeatherDataForCity(latestQuery.toString())
             alreadyShown = true
         }
+
+        // Render the weather info of current loaction when the user allows the location permission
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            fusedLocationProvider?.requestLocationUpdates(
+                locationRequest,
+                locationCallback,
+                Looper.getMainLooper()
+            )
+            locationAlertAnswered = true
+        }
     }
 
     private var fusedLocationProvider: FusedLocationProviderClient? = null
